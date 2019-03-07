@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Released]
 
+## [1.3.2] - 2019-03-07
+
+# Added
+- Add elasticsearch 6.* support.
+
 ## [1.3] - 2017-10-23
 
 # Added

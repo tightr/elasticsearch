@@ -1,13 +1,3 @@
-<p align="center">
-<a href="https://travis-ci.org/basemkhirat/elasticsearch"><img src="https://travis-ci.org/basemkhirat/elasticsearch.svg?branch=master" alt="Build Status"></a>
-<a href="https://packagist.org/packages/basemkhirat/elasticsearch"><img src="https://poser.pugx.org/basemkhirat/elasticsearch/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/basemkhirat/elasticsearch"><img src="https://poser.pugx.org/basemkhirat/elasticsearch/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/basemkhirat/elasticsearch"><img src="https://poser.pugx.org/basemkhirat/elasticsearch/license.svg" alt="License"></a>
-</p>
-
-<p align="center"><img src="http://basemkhirat.com/images/basemkhirat-elasticsearch.png?123"></p>
-
-
 ## Laravel, Lumen and Native php elasticseach query builder to build complex queries using an elegant syntax
 
 - Keeps you away from wasting your time by replacing array queries with a simple and elegant syntax you will love.
@@ -24,14 +14,12 @@
 
 - `php` >= 5.6.6 
   
-  See [Travis CI Builds](https://travis-ci.org/basemkhirat/elasticsearch).
-
 - `laravel/laravel` >= 5.* or `laravel/lumen` >= 5.* or `composer application`
 
 
 ## Documentation
 
-See [Full Documentation](https://github.com/basemkhirat/elasticsearch/wiki/1.-Installation).
+See [Full Documentation](https://github.com/tightr/elasticsearch/wiki/1.-Installation).
 
 ## Installation
 
@@ -41,41 +29,41 @@ See [Full Documentation](https://github.com/basemkhirat/elasticsearch/wiki/1.-In
 ##### 1) Install package using composer.
 
 ```bash
-$ composer require basemkhirat/elasticsearch
+$ composer require tightr/elasticsearch
 ```
 
 ##### 2) Add package service provider (< laravel 5.5).
 
 ```php
-Basemkhirat\Elasticsearch\ElasticsearchServiceProvider::class
+Tightr\Elasticsearch\ElasticsearchServiceProvider::class
 ```
 
 ##### 3) Add package alias (< laravel 5.5).
 
 ```php
-'ES' => Basemkhirat\Elasticsearch\Facades\ES::class
+'ES' => Tightr\Elasticsearch\Facades\ES::class
 ```
 	
 ##### 4) Publishing.
 
 ```bash
-$ php artisan vendor:publish --provider="Basemkhirat\Elasticsearch\ElasticsearchServiceProvider"
+$ php artisan vendor:publish --provider="Tightr\Elasticsearch\ElasticsearchServiceProvider"
 ```
 
 ### <u>Lumen Installation</u>
 
 ##### 1) Install package using composer.
 ```bash
-$ composer require basemkhirat/elasticsearch
+$ composer require tightr/elasticsearch
 ```
 
 ##### 2) Add package service provider in `bootstrap/app.php`.
 
 ```php
-$app->register(Basemkhirat\Elasticsearch\ElasticsearchServiceProvider::class);
+$app->register(Tightr\Elasticsearch\ElasticsearchServiceProvider::class);
 ```
 	
-##### 3) Copy package config directory `vendor/basemkhirat/elasticsearch/src/config` to root folder alongside with `app` directory.
+##### 3) Copy package config directory `vendor/tightr/elasticsearch/src/config` to root folder alongside with `app` directory.
 	
 	
 ##### 4) Making Lumen work with facades by uncommenting this line in `bootstrap/app.php`.
@@ -101,7 +89,7 @@ You can install package with any composer-based applications
 ##### 1) Install package using composer.
 
 ```bash
-$ composer require basemkhirat/elasticsearch
+$ composer require tightr/elasticsearch
 ```
 
 ##### 2) Creating a connection.
@@ -109,7 +97,7 @@ $ composer require basemkhirat/elasticsearch
 ```php
 require "vendor/autoload.php";
 
-use Basemkhirat\Elasticsearch\Connection;
+use Tightr\Elasticsearch\Connection;
 
 $connection = Connection::create([
     'servers' => [
@@ -365,7 +353,7 @@ Models allow you to query for data in your types or indices, as well as insert n
 
 namespace App;
 
-use Basemkhirat\Elasticsearch\Model;
+use Tightr\Elasticsearch\Model;
 
 class Post extends Model
 {
@@ -382,7 +370,7 @@ The above example will use the default connection and default index in `es.php`.
 
 namespace App;
 
-use Basemkhirat\Elasticsearch\Model;
+use Tightr\Elasticsearch\Model;
 
 class Post extends Model
 {
@@ -508,15 +496,15 @@ Scopes should always return a Query instance.
 
 namespace App;
 
-use Basemkhirat\Elasticsearch\Model;
+use Tightr\Elasticsearch\Model;
 
 class Post extends Model
 {
     /**
      * Scope a query to only include popular posts.
      *
-     * @param \Basemkhirat\Elasticsearch\Query $query
-     * @return \Basemkhirat\Elasticsearch\Query
+     * @param \Tightr\Elasticsearch\Query $query
+     * @return \Tightr\Elasticsearch\Query
      */
     public function scopePopular($query, $votes)
     {
@@ -526,8 +514,8 @@ class Post extends Model
     /**
      * Scope a query to only include active posts.
      *
-     * @param \Basemkhirat\Elasticsearch\Query $query
-     * @return \Basemkhirat\Elasticsearch\Query
+     * @param \Tightr\Elasticsearch\Query $query
+     * @return \Tightr\Elasticsearch\Query
      */
     public function scopeActive($query)
     {
@@ -554,7 +542,7 @@ To define an `accessor`, create a getFooAttribute method on your model where `Fo
 
 namespace App;
 
-use Basemkhirat\Elasticsearch\Model;
+use Tightr\Elasticsearch\Model;
 
 class post extends Model
 {
@@ -605,7 +593,7 @@ To define a mutator, define a `setFooAttribute` method on your model where `Foo`
 
 namespace App;
 
-use Basemkhirat\Elasticsearch\Model;
+use Tightr\Elasticsearch\Model;
 
 class post extends Model
 {
@@ -647,7 +635,7 @@ For example, let's cast the `is_published` attribute, which is stored in our ind
 
 namespace App;
 
-use Basemkhirat\Elasticsearch\Model;
+use Tightr\Elasticsearch\Model;
 
 class Post extends Model
 {
@@ -1281,18 +1269,18 @@ ES::type("my_type")->bulk(function ($bulk){
 
 ## Releases
 
-  See [Change Log](https://github.com/basemkhirat/elasticsearch/blob/master/CHANGELOG.md).
+See [Change Log](https://github.com/tightr/elasticsearch/blob/master/CHANGELOG.md).
 
-## Author
-[Basem Khirat](http://basemkhirat.com) - [basemkhirat@gmail.com](mailto:basemkhirat@gmail.com) - [@basemkhirat](https://twitter.com/basemkhirat)  
-
+## Credits
+- [Basem Khirat](http://basemkhirat.com) - [basemkhirat@gmail.com](mailto:basemkhirat@gmail.com) - [@basemkhirat](https://twitter.com/basemkhirat)  
+- [All Contributors](https://github.com/tightr/elasticsearch/graphs/contributors)
 
 ## Bugs, Suggestions and Contributions
 
-Thanks to [everyone](https://github.com/basemkhirat/elasticsearch/graphs/contributors)
+Thanks to [everyone](https://github.com/tightr/elasticsearch/graphs/contributors)
 who has contributed to this project!
 
-Please use [Github](https://github.com/basemkhirat/elasticsearch) for reporting bugs, 
+Please use [Github](https://github.com/tightr/elasticsearch) for reporting bugs, 
 and making comments or suggestions.
 
 ## License

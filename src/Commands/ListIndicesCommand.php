@@ -1,12 +1,12 @@
 <?php
 
-namespace Basemkhirat\Elasticsearch\Commands;
+namespace Tightr\Elasticsearch\Commands;
 
 use Illuminate\Console\Command;
 
 /**
  * Class ListIndicesCommand
- * @package Basemkhirat\Elasticsearch\Commands
+ * @package Tightr\Elasticsearch\Commands
  */
 class ListIndicesCommand extends Command
 {

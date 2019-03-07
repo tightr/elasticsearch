@@ -1,15 +1,15 @@
 <?php
 
-namespace Basemkhirat\Elasticsearch;
+namespace Tightr\Elasticsearch;
 
-use Basemkhirat\Elasticsearch\Classes\Bulk;
-use Basemkhirat\Elasticsearch\Classes\Search;
-use Basemkhirat\Elasticsearch\Collection;
+use Tightr\Elasticsearch\Classes\Bulk;
+use Tightr\Elasticsearch\Classes\Search;
+use Tightr\Elasticsearch\Collection;
 
 
 /**
  * Class Query
- * @package Basemkhirat\Elasticsearch\Query
+ * @package Tightr\Elasticsearch\Query
  */
 class Query
 {
@@ -157,7 +157,7 @@ class Query
 
     /**
      * Elastic model instance
-     * @var \Basemkhirat\Elasticsearch\Model
+     * @var \Tightr\Elasticsearch\Model
      */
     public $model;
 

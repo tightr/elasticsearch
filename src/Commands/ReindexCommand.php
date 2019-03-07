@@ -1,12 +1,12 @@
 <?php
 
-namespace Basemkhirat\Elasticsearch\Commands;
+namespace Tightr\Elasticsearch\Commands;
 
 use Illuminate\Console\Command;
 
 /**
  * Class ReindexCommand
- * @package Basemkhirat\Elasticsearch\Commands
+ * @package Tightr\Elasticsearch\Commands
  */
 class ReindexCommand extends Command
 {

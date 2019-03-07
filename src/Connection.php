@@ -1,12 +1,12 @@
 <?php
 
-namespace Basemkhirat\Elasticsearch;
+namespace Tightr\Elasticsearch;
 
 use Elasticsearch\ClientBuilder;
 
 /**
  * Class Connection
- * @package Basemkhirat\Elasticsearch
+ * @package Tightr\Elasticsearch
  */
 class Connection
 {

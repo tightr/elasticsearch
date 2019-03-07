@@ -1,20 +1,20 @@
 <?php
 
-namespace Basemkhirat\Elasticsearch;
+namespace Tightr\Elasticsearch;
 
-use Basemkhirat\Elasticsearch\Commands\ReindexCommand;
+use Tightr\Elasticsearch\Commands\ReindexCommand;
 use Elasticsearch\ClientBuilder as ElasticBuilder;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Scout\EngineManager;
-use Basemkhirat\Elasticsearch\Commands\ListIndicesCommand;
-use Basemkhirat\Elasticsearch\Commands\CreateIndexCommand;
-use Basemkhirat\Elasticsearch\Commands\DropIndexCommand;
-use Basemkhirat\Elasticsearch\Commands\UpdateIndexCommand;
+use Tightr\Elasticsearch\Commands\ListIndicesCommand;
+use Tightr\Elasticsearch\Commands\CreateIndexCommand;
+use Tightr\Elasticsearch\Commands\DropIndexCommand;
+use Tightr\Elasticsearch\Commands\UpdateIndexCommand;
 
 /**
  * Class ElasticsearchServiceProvider
- * @package Basemkhirat\Elasticsearch
+ * @package Tightr\Elasticsearch
  */
 class ElasticsearchServiceProvider extends ServiceProvider
 {

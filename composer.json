@@ -1,5 +1,5 @@
 {
-    "name": "basemkhirat/elasticsearch",
+    "name": "tightr/elasticsearch",
     "description": "Laravel, Lumen and Native php elasticseach query builder to build complex queries using an elegant syntax",
     "keywords": [
         "elasticsearch",
@@ -13,20 +13,21 @@
     ],
     "license": "MIT",
     "type": "package",
-    "homepage": "http://basemkhirat.com",
-    "support": {
-        "issues": "https://github.com/basemkhirat/elasticsearch/issues",
-        "source": "http://basemkhirat.com/indexing/2016/01/07/laravel-elasticseach-query-builder.html"
-    },
+    "homepage": "https://github.com/tightr/elasticsearch",
     "authors": [
         {
             "name": "basemkhirat",
             "email": "basemkhirat@gmail.com"
+        },
+        {
+            "name": "tightR",
+            "email": "patrice.mayet@tightr.com",
+            "homepage": "https://www.tightr.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Basemkhirat\\Elasticsearch\\": "src/"
+            "Tightr\\Elasticsearch\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -34,7 +35,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Basemkhirat\\Elasticsearch\\Tests\\": "tests/"
+            "Tightr\\Elasticsearch\\Tests\\": "tests/"
         }
     },
     "require": {
@@ -51,10 +52,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Basemkhirat\\Elasticsearch\\ElasticsearchServiceProvider"
+                "Tightr\\Elasticsearch\\ElasticsearchServiceProvider"
             ],
             "aliases": {
-                "ES": "Basemkhirat\\Elasticsearch\\Facades\\ES"
+                "ES": "Tightr\\Elasticsearch\\Facades\\ES"
             }
         }
     }

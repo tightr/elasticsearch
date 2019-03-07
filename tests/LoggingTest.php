@@ -6,10 +6,10 @@
  * Time: 19:58
  */
 
-namespace Basemkhirat\Elasticsearch\Tests;
+namespace Tightr\Elasticsearch\Tests;
 
 
-use Basemkhirat\Elasticsearch\Connection;
+use Tightr\Elasticsearch\Connection;
 use Elasticsearch\ClientBuilder;
 use Monolog\Logger;
 
