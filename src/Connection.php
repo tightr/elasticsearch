@@ -58,8 +58,8 @@ class Connection
 
         $clientBuilder = ClientBuilder::create();
 
-        if ($config['aws']) {
-            $clientBuilder->setHandler(new \Aws\ElasticsearchService\ElasticsearchPhpHandler($config['aws_region']));
+        if ($config['aws']['service']) {
+            $clientBuilder->setHandler(new \Aws\ElasticsearchService\ElasticsearchPhpHandler($config['aws']['region']));
         }
 
         $clientBuilder->setHosts($config["servers"]);
@@ -107,8 +107,8 @@ class Connection
 
             $clientBuilder = self::configureLogging($clientBuilder,$config);
 
-            if ($config['aws']) {
-                $clientBuilder->setHandler(new \Aws\ElasticsearchService\ElasticsearchPhpHandler($config['aws_region']));
+            if ($config['aws']['service']) {
+                $clientBuilder->setHandler(new \Aws\ElasticsearchService\ElasticsearchPhpHandler($config['aws']['region']));
             }
 
             // Build the client object

@@ -29,7 +29,6 @@ return [
         'default' => [
 
             'servers' => [
-
                 [
                     'host' => env('ELASTIC_HOST', '127.0.0.1'),
                     'port' => env('ELASTIC_PORT', 9200),
@@ -37,14 +36,14 @@ return [
                     'pass' => env('ELASTIC_PASS', ''),
                     'scheme' => env('ELASTIC_SCHEME', 'http'),
                 ]
-
             ],
 
             'index' => env('ELASTIC_INDEX', 'my_index'),
 
-            // Elasticsearch handlers
-            'aws' => env('AWS_COMPATIBILITY',false),
-            'aws_region' => env('AWS_DEFAULT_REGION', 'eu-west-1'),
+            'aws' => [
+                'service' => env('AWS_ELASTICSEARCH_SERVICE',false),
+                'region' => env('AWS_DEFAULT_REGION', 'eu-west-1'),
+            ],
             
             'logging' => [
                 'enabled'   => env('ELASTIC_LOGGING_ENABLED',false),
