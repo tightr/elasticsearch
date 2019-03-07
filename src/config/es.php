@@ -43,7 +43,7 @@ return [
             'index' => env('ELASTIC_INDEX', 'my_index'),
 
             // Elasticsearch handlers
-            'aws' => env('ELASTIC_LOGGING_ENABLED',false),
+            'aws' => env('AWS_COMPATIBILITY',false),
             'aws_region' => env('AWS_DEFAULT_REGION', 'eu-west-1'),
             
             'logging' => [
